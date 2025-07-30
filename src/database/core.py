@@ -8,13 +8,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 """ You can add a DATABASE_URL environment variable to your .env file """
-# DATABASE_URL = os.getenv("DATABASE_URL")
+DATABASE_URL = os.getenv("DATABASE_URL")
 
 """ Or hard code SQLite here """
 # DATABASE_URL = "sqlite:///./todosapp.db"
-
-""" Or hard code PostgreSQL here """
-DATABASE_URL="postgresql://postgres:postgres@db:5432/cleanfastapi"
 
 engine = create_engine(DATABASE_URL)
 
